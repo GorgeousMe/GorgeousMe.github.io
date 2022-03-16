@@ -72,7 +72,7 @@ aside .list-group-item.active{
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav navbar-right">
+			<ul class="nav navbar-nav">
 				<li><a href="index.html">首页</a></li>
 				<li><a href="second.html">组委会</a></li>
 				<li><a href="third.html">大会程序</a></li>
@@ -92,16 +92,7 @@ aside .list-group-item.active{
 	
 </div>
 <!-- 隐藏 -->
-<script>
-	if(IsMobile()){
-		var nav=$(".navigation");
-		var h=$(".navbar-header").height()+'px';
-		$(nav).children('nav').addClass("navbar-fixed-top");
-		$('.hid').css('height',h);
-		console.log($(nav).length);
-		console.log(h)	
-	}
-</script>
+
 	
 	  <div class="class="jumbotron" style="position:relative;z-index:1;margin:0 auto; background-color:white;">
 	     <img src="./images/tj3.jpg"  class="img-responsive city" alt="天津" style="opacity:0.6; filter: alpha(opacity=60);"   />
@@ -111,6 +102,29 @@ aside .list-group-item.active{
 		 </div>
 	  </div>
 	  <br>
+	  <script>
+	  	if(IsMobile()){
+	  		var nav=$(".navigation");
+	  		var h=$(".navbar-header").height()+'px';
+	  		$(nav).children('nav').addClass("navbar-fixed-top");
+	  		$('.hid').css('height',h);
+	  		$('.bigtit').text('2022 天津')
+	  		console.log($(nav).length);
+	  		console.log(h)	
+	  	}else{
+	  		$('.header-top').css('display','none')
+	  		var h=$(".navbar").height()+'px';
+	  		$('.navigation').css('height',h);
+	  		$('.navigation').css('background-color','#fff');
+	  		
+	  		$('.navbar').css('margin-left','30%')
+	  		
+	  		$('.navigation').addClass("navbar-fixed-top");
+	  		$('.hid').css('height',h);
+	  		$('.artw strong').text('SYMPOSIUMS')
+	  		console.log(h)
+	  	}
+	  </script>
 	  <div class="alert alert-info text-center" role="alert">敬请期待......</div>
 	  <!-- 会议议程框 -->
 	    <div class="container" style="display:none;">
@@ -213,7 +227,7 @@ aside .list-group-item.active{
 	
 						<p>
 							
-						2022年第一届CAAI大会将在天津市举办，为了办好 CAAI 2022 这一盛会，我们诚挚邀请大家踊跃赞助！
+						由中国人工智能学会（CAAI）主办的第一届“生物神经智能-神经网络与图神经网络”研讨会将在天津市举办，为了办好这一盛会，我们诚挚邀请相关企业踊跃赞助！
 						</p>
 						</div>
 	
