@@ -33,186 +33,16 @@
 	href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic'
 	rel='stylesheet' type='text/css'>
 <style>
-.navbar-collapse.in{
-	overflow-y: visible;
+
+aside .list-group-item.active{
+	background-color: #D9534F;
+	border: 0;
 }
-	.active{
-		background-color: #292929;
-		color: white;
-	}
-	#info {
-		/* color: #0055AA; */
-		color:#333333;
-	}
 
-	#info .panel-heading {
-		line-height: 2.5rem;
-		font-weight: 1000;
-	}
-
-	.panel-body {
-		padding-top: 0.25rem;
-	}
-
-	.panel-body .row div {
-		padding-top: 0.9375rem;
-		font-size: 2rem;
-
-	}
-
-	.panel .row div:nth-child(even) {
-		color: #dc3545;
-		font-weight: bolder;
-		/* background-color: #008000; */
-	}
- 
-	.panel .row div:nth-child(odd) {
-		color: ##007bff;
-		font-weight: bolder;
-		/* background-color: #262626; */
-	}
-
-	.panel .row div:nth-child(odd)::before {
-		/* content: "人民"; */
-	}
-
-	.list-group {
-		padding-left: 0rem;
-	}
-
-	.list-group .list-group-item {
-		padding: 0px 5px;
-		border: 0 0.0625rem 0 0;
-		border-radius: 0rem;
-		border: 0rem;
-		/* border-bottom: 0.0625rem solid #0053A1;
-		border-radius: 0rem; */
-	}
-
-	.list-group-item>a {
-		display: block;
-		text-decoration: none;
-	}
-
-	.list-group .list-group-item {
-		border-bottom: 1px dashed #2576E3;
-	}
-
-	/* .text-danger {
-		color: red;
-	} */
-
-	.mp30 .panel-heading {
-		background-color: white;
-	}
-	.body{
-		color: #000066;
-	}
-
-	.zanzhu .img-thumbnail {
-		border: 0rem;
-		padding: 0rem;
-		padding: 0.3125rem 0;
-	}
-
-	.zanzhu .table td {
-		border-top: 0.0625rem dashed ##0053A1;
-		padding-left: 0.625rem;
-	}
-
-	.zanzhu td a {
-		padding: 0;
-
-
-	}
-
-	.zanzhu td .row {
-		margin: 0;
-
-	}
-
-	@media screen and (max-width: 768px) {
-		.zanzhu .col-xs-4 {
-			padding: 0;
-			padding: 0 0.125rem;
-		}
-
-		.table>thead>tr>th,
-		.table>tbody>tr>th,
-		.table>tfoot>tr>th,
-		.table>thead>tr>td,
-		.table>tbody>tr>td,
-		.table>tfoot>tr>td {
-			padding: 0;
-			padding-left: 2rem;
-			padding-right: 2rem;
-
-			vertical-align: middle;
-		}
-
-	}
-
-	/* #main{
-	  box-shadow:
-	  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-	  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-	  0 12.5px 10px rgba(0, 0, 0, 0.06),
-	  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-	  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-	  0 100px 80px rgba(0, 0, 0, 0.12);
-	} */
-	#main {
-		border: transparent;
-		box-shadow: 0 10px 20px rgb(0 0 0 / 10%);
-	}
-	.h3{
-		margin-top: 0;
-		margin-bottom: 0;
-	}
-	#main .blog-main .blog-teaser .body p{
-		font-family: "microsoft yahei";
-		color: #000000;
-		text-indent: 2em;
-		font-size:1.5625rem;
-		line-height:2.5rem;
-	}
-	.s_news li a:hover{
-		color: red;
-	}
 </style>
-
-
 </head>
-<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
-<script>
-	wx.config({
-		debug: false,
-		appId: 'wxfb95e4025a5d4614',
-		timestamp: '1498633007',
-		nonceStr: 'tnZJBsdrUo88MFiB',
-		signature: 'cae67a0a883822e1087cba091321b14b73152210',
-		jsApiList: [
-			'onMenuShareTimeline',
-			'onMenuShareAppMessage'
-		  ]
-	});
-	wx.ready(function () {
-		var shareData = {
-			title: '马富天博客_PHP博客_PHP Blog_PHP编程_分享PHP开发经验',	//	标题
-			desc: '马富天博客是个人独立博客专为学习php打造php教程技术,在马富天博客里可以找到你所需要的所有关于php技术解决文章方案,打造一个以技术经验为主题的分享平台!QQ:335134463',	//	描述
-			link: 'http://www.mafutian.net/',	//	分享的URL，必须和当前打开的网页的URL是一样的
-			imgUrl: 'http://www.mafutian.net/logo.jpg'	//	缩略图地址
-		};
-		wx.onMenuShareAppMessage(shareData);
-		wx.onMenuShareTimeline(shareData);
-	});
-	wx.error(function (res) {
-	  //alert(res.errMsg);//错误提示
-	});
-</script>
-
-<div>
-<div class="header-top">
+<body>
+<div class="header-top" style="display: none;">
 	<div class="container">
 		<p class="location"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>39.13N 117.2E
 			TianJin</p>
@@ -240,483 +70,273 @@
 			</button>
 			<span class="navbar-brand artw bigtit">CAAI&nbsp;2022&nbsp;天津</span>
 		</div>
+
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="index.html">首页</a></li>
+				<li><a href="fourth.html">首页</a></li>
 				<li><a href="second.html">组委会</a></li>
 				<li><a href="third.html">大会程序</a></li>
-				<li><a href="fourth.html">特邀报告</a></li>
+				<li  class="active"><a href="index.html">特邀报告</a></li>
 				<li><a href="fifth.html">专题讨论会</a></li>
 				<li><a href="sixth.html">会议注册</a></li>
 				<li><a href="seventh.html">交通和酒店</a></li>
 				<li><a href="eighth.html">赞助商</a></li>
 			</ul>
-			
 			<div class="clearfix"></div>
 		</div>
 	</nav>
 </div>
-</div>
-
 
 <!-- 隐藏 -->
 <div class="hid">
 	
 </div>
 <!-- 隐藏 -->
-<script>
-	if(IsMobile()){
-		var nav=$(".navigation");
-		var h=$(".navbar-header").height()+'px';
-		$(nav).children('nav').addClass("navbar-fixed-top");
-		$('.hid').css('height',h);
-		$('.bigtit').text('2022 天津')
-		console.log($(nav).length);
-		console.log(h)	
-	}else{
-		$('.header-top').css('display','none')
-		var h=$(".navbar").height()+'px';
-		$('.navigation').css('height',h);
-		$('.navigation').css('background-color','#fff');
-		
-		$('.navbar').css('margin-left','30%')
-		
-		$('.navigation').addClass("navbar-fixed-top");
-		$('.hid').css('height',h);
-		
-		console.log(h)
-	}
-</script>
 
-
-
-<div class="screen-shots">
-	<!--sreen-gallery-cursual-->
-	<div class=" sreen-gallery-cursual container-fluid" style="background-color: black;">
-		<div class="row col-md-12">
-			<div class="text-center panel col-xs-12 col-md-6 col-md-offset-3" id="info">
-				<div class="panel-heading">
-
-					<span class="h3"><strong>CAAI 2022 天津</strong> </span> <br />
-					<span class="h3"><strong>第一届“生物神经智能——神经网络与图神经网络”研讨会</strong></span>
-
-				</div>
-				<div class="panel-body h4">
-
-					<div class="row">
-						<div class="col-md-4 col-md-offset-1">会议时间</div>
-						<div class="col-md-6">2022年4月16-17日</div>
-					</div>
-					<div class="row">
-						<div class="col-md-4 col-md-offset-1">会议地点</div>
-						<div class="col-md-6">天津大学北洋园校区55教学楼</div>
-					</div>
-
-					<div class="row">
-						<div class="col-md-4 col-md-offset-1">会议形式</div>
-						<div class="col-md-6">线上线下相结合</div>
-					</div>
-
-				<!-- 	<div class="row">
-						<div class="col-md-4 col-md-offset-1">会议规模</div>
-						<div class="col-md-6">约300人</div>
-					</div> -->
-
-				</div>
-				<div class="panel-footer text-danger">
-					<strong>
-						免费参加，请参会代表于2022年4月10日24:00之前将<a href="./doc/zhucehuizhi.doc" target="_blank">回执(点击下载)</a>发送到会务组邮箱（王晓宝，wxbxmt@tju.edu.cn）。
-					</strong>
-				</div>
-			</div>
-
-
-		</div>
-	</div>
-	<!--sreen-gallery-cursual-->
-	<br />
-
-	<!-- 第三方排版 -->
-	<!-- <div class="widewrapper main"> -->
-	<div class="container" id="main">
-		<div class="row">
-			<div class="col-md-8 blog-main">
-				<div class="row">
-					<div class="col-md-6 col-sm-6">
-						<article class="blog-teaser">
-							<header>
-								<img src="img/#.jpg" alt="">
-								<h3>
-									
-										<span class="h3">活动背景</span>
-									
-								</h3>
-								<span class="meta">
-									ACTIVITY BACKGROUND
-								</span>
-								<hr>
-							</header>
-							<div class="body">
-								<p>
-									学习与智能的数学定义与模型已突显为21世纪的重大科学问题，也成为了以信息和智能为标志的新时代的必答题，
-									科学目标为实现机器智能。要想使得学习与智能成为科学，而不仅仅是技术，科学界的新使命是创建人工
-									智能新基础、新理论，
-									包括：数学智能、信息智能、（生物）神经智能、
-									......
-
-								</p>
-							</div>
-							<div class="clearfix">
-								<button type="button" class="btn btn-default" data-toggle="modal"
-									data-target="#myModal">Read more</button>
-									
-							</div>
-
-							<!-- modal -->
-							<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
-								aria-labelledby="myModalLabel" aria-hidden="true">
-								<div class="modal-dialog">
-									<div class="modal-content">
-										<div class="modal-header">
-											<button type="button" class="close" data-dismiss="modal"
-												aria-hidden="true">&times;</button>
-											<h4 class="modal-title" id="myModalLabel">活动背景</h4>
-										</div>
-										<div class="modal-body">
-											<p class="lead h6" style="text-indent: 2em;font-size: 16px;">
-												学习与智能的数学定义与模型已突显为21世纪的重大科学问题，也成为了以信息和智能为标志的新时代的必答题，科学目标为实现机器智能。要想使得学习与智能成为科学，而不仅仅是技术，科学界的新使命是创建人工智能新基础、新理论，包括：数学智能、信息智能、（生物）神经智能、物理智能和智能工程原理等重要科学理论支撑，实现科学为智能。生物神经智能（包括神经、脑、进化等）是从生物的角度研究智能产生的机理、机制、原理、理论、方法与技术，是实现未来机器智能的重要支柱之一。本次研讨会重点是从现有的神经网络与图神经网络作为起点和切入点，对上述新学科及其涉及的重要科学问题进行深入交流和探讨。
-											</p>
-											<p class="lead h6" style="text-indent: 2em;font-size: 16px;">
-												人工神经网络是一种对人脑神经认知机制的模拟，是人工智能连接主义的基础。近年来随着深度学习的兴起，神经网络再次成为了人工智能的前沿研究热点，大量新的理论与算法被提出，且广泛应用于机器视觉、语音、自然语言处理等诸多领域，显著提升了当今人工智能的发展水平。除卷积神经网络、循环神经网络等经典模型以外，善于描述实例间依赖关系的图神经网络最近被提出。它被视为是连接主义与符号主义的结合，不仅可使深度学习应用于图这种非欧式结构上，还能为深度学习赋予一定的推理能力。在深度学习的鲁棒性和解释性受到质疑的今天，图神经网络或可为未来人工智能的发展提供一个可行方向。
-											</p>
-											<p class="lead" style="text-indent: 2em;font-size: 16px;">
-												本研讨会主要关注于神经网络与图神经网络的前沿基础理论算法及其重要应用的当前进展，包括但不仅限于：深度学习与认知推理、神经网络的鲁棒性与可解释性、结构信息论下的图神经网络、图神经网络与因果推断、复杂图上的图神经网络及其应用等，期望能够为该领域研究者提供一个新思维碰撞的开放式交流平台。
-											</p>
-
-
-
-										</div>
-										<div class="modal-footer">
-											<button type="button" class="btn btn-default"
-												data-dismiss="modal">关闭</button>
-
-										</div>
-									</div><!-- /.modal-content -->
-								</div><!-- /.modal -->
-							</div>
-
-							<!-- modal -->
-						</article>
-					</div>
-					<div class="col-md-6 col-sm-6">
-						<article class="blog-teaser">
-							<header>
-								<img src="./img/#.jpg" alt="">
-								<h3><span class="h3">组织机构</span></h3>
-								<span class="meta">
-									ORGANIZATION
-								</span>
-								<hr>
-							</header>
-							<div class="body">
-								<p>
-									由中国人工智能学会（CAAI）主办，人工智能基础专业委员会与中国生物信息学学会(筹)“基因组信息学”分会承办、天津大学与河北工业大学共同协办的
-									第一届“生物神经智能——神经网络和图神经网络”专题学术研讨会，定于2022年4月16～17日在天津市举行（根据疫情发展情况可采用线下线上结合的方式）。
-								</p>
-
-							</div>
-							<div class="clearfix" style="visibility: hidden;">
-								<a href="single.html" class="btn btn-clean-one">Read more</a>
-							</div>
-						</article>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-6 col-sm-6">
-						<article class="blog-teaser">
-							<header>
-								<img src="img/#.jpg" alt="">
-								<h3><span class="h3">活动流程及其安排</span></h3>
-								<span class="meta">ACTIVITY FLOW</span>
-								<hr>
-							</header>
-							<div class="body">
-								<p>
-									2022年4月15日（星期五）正式报到，报到地点：天津大学北洋园校区，时间：10:00～23:00。<br>
-									&nbsp;&nbsp;&nbsp;&nbsp;2022年4月16日（星期六）全天开会，拟邀请本领域专家作5个特邀报告，每个报告45分钟，外加提问15分钟。<br>
-									&nbsp;&nbsp;&nbsp;&nbsp;2022年4月17日（星期天）上午，专题讨论会，本领域学者自由报名，每个报告15分钟，外加讨论5分钟。
-
-								</p>
-
-							</div>
-							<div class="clearfix" style="visibility: hidden;">
-								<a href="single.html" class="btn btn-clean-one">Read more</a>
-							</div>
-						</article>
-					</div>
-					<div class="col-md-6 col-sm-6">
-						<article class="blog-teaser">
-							<header>
-								<img src="img/#.jpg" alt="">
-								<h3><span class="h3">重要事项说明与提醒</span></h3>
-								<span class="meta">
-									IMPORTANT REMINDERS
-								</span>
-								<hr>
-							</header>
-							<div class="body">
-								<p>
-									请参会代表于2022年4月10日24：00前将回执发送到会务组邮箱（王晓宝，wxbxmt@tju.edu.cn）
-									请于2022年4月10日前，将讨论会报告的题目与摘要发送至会务组邮箱。
-
-								</p>
-							</div>
-							<div class="clearfix" style="visibility: hidden;">
-								<a href="single.html" class="btn btn-clean-one">Read more</a>
-							</div>
-						</article>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-6 col-sm-6">
-						<article class="blog-teaser">
-							<header>
-								<img src="img/#.jpg" alt="">
-								<h3><span class="h3">赞助商</span></h3>
-								<span class="meta">SPONSORS</span>
-								<hr>
-							</header>
-							<div class="body">
-								<p>
 	
-									由中国人工智能学会（CAAI）主办的第一届“生物神经智能-神经网络与图神经网络”研讨会将在天津市举办，为了办好这一盛会，我们诚挚邀请相关企业踊跃赞助！
-									<br>
-									<br>
-									
-								</p>
+	  <div class="class="jumbotron" style="position:relative;z-index:1;margin:0 auto; background-color:white;">
+	     <img src="./images/tj3.jpg"  class="img-responsive city" alt="天津" style="opacity:0.6; filter: alpha(opacity=60);"   />
+		 <div style="width:100%;position:absolute;z-index:2;top:30%; text-align:center;">
+		    <!-- <h1 class="h2 artw"><strong>CAAI&emsp;2022&emsp;COMMITTEES</strong></h1> -->
+			<h1 class="h2 artw"><strong><span>CAAI&emsp;2022&emsp;</span>特邀报告</strong></h1>
+		 </div>
+	  </div>
+	  <script>
+	  	if(IsMobile()){
+	  		var nav=$(".navigation");
+	  		var h=$(".navbar-header").height()+'px';
+	  		$(nav).children('nav').addClass("navbar-fixed-top");
+	  		$('.hid').css('height',h);
+	  		$('.bigtit').text('2022 天津')
+			$('.artw strong').text('REPORTS')
+	  		console.log($(nav).length);
+	  		console.log(h)	
+	  	}else{
+	  		$('.header-top').css('display','none')
+	  		var h=$(".navbar").height()+'px';
+	  		$('.navigation').css('height',h);
+	  		$('.navigation').css('background-color','#fff');
+	  		
+	  		$('.navbar').css('margin-left','30%')
+	  		
+	  		$('.navigation').addClass("navbar-fixed-top");
+	  		$('.hid').css('height',h);
+	  		$('.artw strong').text('REPORTS')
+	  		console.log(h)
+	  	}
+	  </script>
+	  <br>
+	  <!-- <div class="alert alert-info text-center" role="alert">敬请期待......</div> -->
+	  <!-- 会议议程框 -->
+	    <div class="container">
+			<hr>
+			<header>
+			   <ul class="breadcrumb text-info">
+					<li class="h3" style="color:red;">特邀报告</li>
+					<li><b>时间：2022年4月16日(全天)</b></li>
+					<li><b>地点：天津大学北洋园校区55教学楼</b></li>
+			   </ul>
+			</header>
+		<aside class="col-md-3 col-xs-12">
+			<ul class="list-group">
+				<li class="list-group-item active">特邀嘉宾</li>
+				<li class="list-group-item">杨博教授(吉林大学)</li>
+				<li class="list-group-item">吴飞教授(浙江大学)</li>
+				<li class="list-group-item">王震教授(西北工业大学)</li>
+				<li class="list-group-item">王平辉教授(西安交通大学)</li>
+				<li class="list-group-item">高晓沨教授(上海交通大学)</li>
 				
-							</div>
-							<div class="clearfix" style="visibility: hidden;">
-								<a href="single.html" class="btn btn-clean-one">Read more</a>
-							</div>
-						</article>
-					</div>
+				<li class="list-group-item">熊贇教授(复旦大学)</li>
+			</ul>
+		<!-- 	<ul class="list-group">
+				<li class="list-group-item active">特邀嘉宾</li>
+				<li class="list-group-item">张三</li>
+				<li class="list-group-item">李四</li>
+				<li class="list-group-item">王五</li>
+				<li class="list-group-item">赵六</li>
+				<li class="list-group-item">汤七</li>
+			</ul> -->
+		</aside>
+		 <main class="container col-md-9 col-xs-12">
+			 
+			 <div class="media well">
+				 
+				 <div class="media-body">
+				   <img src="./img/yangbo.png" class="media-object" style="width:80px;float:left;padding-right:6px;">
+				   <h4 class="media-heading">杨博</h4>
+				   <p>
+					个人简介：杨博，吉林大学计算机科学与技术学院教授，博士生导师。现任计算机学院和软件学院院长，符号计算与知识工程教育部重点实验室主任，吉林大学校学术委员会委员，中国人工智能学会理事，中国人工智能学会知识工程与分布智能专委会副主任，中国计算机学会杰出会员。长期从事知识工程、数据挖掘和社交网络分析等方面的研究，在 IEEE TPAMI、IEEE TKDE、IEEE TCYB、IEEE TNNLS、ACM TKDD、ACM TWEB、中国科学、AAAI、NeurIPS、ICLR、CVPR、WWW、IJCAI、UbiComp、ICDM、COLING等期刊和会议上发表学术论文120多篇；出版专著1部和译著1部；获吉林省科技进步一等奖2项，吉林省自然科学二等奖1项，吴文俊人工智能自然科学二等奖1项。
+				   </p>
+				 </div>
+				 
+				 
+				 <div>
+					<b>报告题目：</b> <span>神经符号系统—基本原理与案例分析</span><br>
+					<b>报告时间：</b> <time>2022-4-16&nbsp;00:00~00:00</time><br>
+					<b>内容摘要：</b> 
+					<span class="h5">
+						符号主义和链接主义是人工智能的两大方法论，分别模拟演绎推理和归纳学习两种认知过程。神经符号系统期望将两者融合起来，取长补短，建立具有更加高效、鲁棒、可解释的智能系统，是当前人工智能研究的一个热点。本报告简要介绍神经符号系统的基本原理，关键技术，以及在相关领域的应用案例。
+					</span>
+			   </div>
+			   <hr>
+		    </div>	
+			
+			<div class="media well">
+				 
+				   
+				 
+				 <div class="media-body">	
+					<img src="./img/wufei.jpg" class="media-object" style="width:80px;float:left;padding-right:6px;">
+				   <h4 class="media-heading">吴飞</h4>
+				   <p>
+					   个人简介：浙江大学求是特聘教授，博士生导师。主要研究领域为人工智能、多媒体分析与检索和统计学习理论。浙江大学人工智能研究所所长、美国加州大学伯克利分校统计系访问学（2009.10-2010.8）。
+
+
+
+国家杰出青年科学基金获得者（2016年）、入选“高校计算机专业优秀教师奖励计划”(2018年)、宝钢优秀教师奖（2019年度），教育部人工智能科技创新专家组工作组组长（2018.8-2020.12）、科技部科技创新2030“新一代人工智能”重大科技项目指南编制专家。
+
+ 
+
+科技部重点研发计划项目负责人、主持国家自然科学基金重点项目2项，担任中国工程院院刊《Engineering》信息与电子工程学科执行主编、中国工程院信息学部分刊信息电子前沿《Frontiers of Information Technology & Electronic Engineering》编委、《IEEE Transactions on Cybernetics》编委、中国计算机学会多媒体技术专业委员会常务委员。
+				   </p>
+				</div>
+				 <div>
+					<b>报告题目：</b> <span>端云协同下图式数据的神经网络学习</span><br>
+					<b>报告时间：</b> <time>2022-4-16&nbsp;00:00~00:00</time><br>
+					<b>内容摘要：</b> 
+					<span class="h5">
+					  基于深度学习和迁移学习等技术，以“涌现”和“同质化”为特点的大模型或基石模型取得了突出成效。在 “泛在互联、端云协同、AI赋能”时代背景下，将大模型蒸馏压缩为终端可用个性化小模型，
+					  同时终端可用个性化小模型汇聚起来提升云端大模型的泛化能力，形成端云协同机器学习计算范式，体现“须弥纳于芥子”的哲学思想，
+					  是大模型赋能经济发展和社会进步要解决的关键问题。本报告将介绍大小模型协同进化分布式机器学习平台“洛犀”。
+					  在端云协同分布式架构下，洛犀平台对图式结构海量数据深度学习，所得大模型通过高精度压缩，约简为终端可用的小模型，小模型的实践向大模型汇聚累积起来，以不断提升云端大模型的认知推理能力。
+					</span>
+			   </div>
+			   <hr>
+			</div>	
+			
+			
+					<div class="media well">
+						 
+						 <div class="media-body">	
+							<img src="./img/wangzheng.png" class="media-object" style="width:80px;float:left;padding-right:6px;">
+							
+							
+						   <h4 class="media-heading">王震</h4>
+						   <p>
+							   个人简介：王震，西北工业大学教授，全球高被引科学家，主要研究方向为人工智能基础、网络科学、认知计算，并结合学校特色从事GF应用研究。
+							   目前，在PNAS，Nature Communications，Science Advances、Physical Review Letters
+							   ，IEEE顶级汇刊等发表论文100余篇，引用14000余次，H因子55，完成行业技术标准4项。
+							   研究成果多次被美国科学院院士、欧洲科学院院士、AAAS Fellow、APS Fellow、
+							   IEEE Fellow等国际知名学者积极评价，也被Science、Nature News、LiveScience、
+							   ScienceDaily、科学网等知名学术媒体专题报道。
+							   近5年，主持国家自然科学基金重点项目、GF项目、海外基金等10余项，
+							   受邀在国外知名研究机构和国际顶级会议做大会报告和特邀报告80余次。
+							   获多项科研奖励：教育部自然科学奖二等奖，中国中文信息学会科学技术奖一等奖，
+							   首届《麻省理工科技评论》“中国35岁以下科技创新青年奖”(西部唯一)，陕西省第十四届自然科学优秀学术论文奖一等奖等。
+							   此外，担任7个国际SCI期刊等杂志的编辑，和Elsevier杂志社的特邀报告人和学术会议召集人。	   
+						   </p>
+						</div>
+						 <div>
+							<b>报告题目：</b> <span></span><br>
+							<b>报告时间：</b> <time>2022-4-16&nbsp;00:00~00:00</time><br>
+							<b>内容摘要：</b> 
+							<span class="h5">
+							
+							</span>
+					   </div>
+					   <hr>
+					</div>	
 					
-				</div>
+			
+			
+			
+			<div class="media well">
 				
-			</div>
-			<aside class="col-md-4 blog-aside">
-
-				<div class="aside-widget">
-					<header>
-						<h4 class="h3">
-							<span class="glyphicon glyphicon-list-alt"></span>&nbsp;<b>文件下载</b>
-						</h4>
-					</header>
-					<div class="body">
-
-
-						<div class="row">
-							<div class="col-xs-12">
-								<ul class="list-group list-group-flush s_news col-xs-12">
-									<li class="list-group-item">
-										<a href="" class="h4" style="color: red;">
-											<span class="glyphicon glyphicon-fire"></span>
-											 2022 天津，欢迎您！
-										</a>
-									</li>
-									
-									<li class="list-group-item">
-										<a href="./doc/inform.pdf" class="h4" target="_blank">
-											<span class="glyphicon glyphicon-chevron-right"></span>
-											点击下载研讨会议通知。
-										</a>
-									</li>
-									<li class="list-group-item">
-										<a href="./doc/huodongfangan.pdf" class="h4" target="_blank">
-											<span class="glyphicon glyphicon-chevron-right"></span>
-											点击下载研讨会活动方案。
-										</a>
-									</li>
-									<li class="list-group-item">
-										<a href="./doc/shenbaobiao.doc" class="h4" target="_blank">
-											<span class="glyphicon glyphicon-chevron-right"></span>
-											点击下载研讨会活动申请表。
-										</a>
-									</li>
-									<li class="list-group-item">
-										<a href="./doc/zhucehuizhi.doc" class="h4" target="_blank">
-											<span class="glyphicon glyphicon-chevron-right"></span>
-											点击下载研讨会注册回执。
-										</a>
-									</li>
-									
-
-
-								</ul>
-							</div>
-						</div>
-
-
-
-
-					</div>
+				 <div class="media-body">		
+					<img src="./img/wangpinghui.jpg" class="media-object" style="width:80px;float:left;padding-right:6px;">
+				   <h4 class="media-heading">王平辉</h4>
+				   <p>
+					   个人简介：王平辉，西安交通大学教授/博士生导师，国家优秀青年科学基金获得者。2002年至2012年就读于西安交通大学并获学士和博士学位，曾任香港中文大学、加拿大麦吉尔大学和新加坡国立大学博士后、华为香港诺亚方舟大数据实验室研究员。作为项目负责人主持国家重点研发计划项目课题、国家自然科学基金优秀青年科学基金项目、教育部-中国移动“人工智能”建设项目等。主要研究方向为大数据、智能服务、智能运维与网络安全等，在SIGMOD、KDD、VLDB、NeurIPS、ACL、IEEE TKDE、IEEE TIFS等中国计算机学会（CCF）推荐的A类会议和期刊上发表学术论文40余篇。
+				   </p>
 				</div>
-
-				<div class="aside-widget">
-					<header>
-						<h3 class="h3">
-							<span class="glyphicon glyphicon-list-alt"></span><b>&nbsp;新闻</b>
-						</h3>
-					</header>
-					<div class="body">
-						<div class="row">
-							<div class="col-xs-12">
-								<ul class="list-group list-group-flush s_news col-xs-12">
-									<li class="list-group-item">
-										<a href="" class="h4 text-primary">
-											<span class="text-danger">
-												OPPO
-											</span>
-											成为CAAI 2022 铂金赞助商
-										</a>
-									</li>
-								</ul>
-
-							</div>
-						</div>
-
-
-
-
-					</div>
+				 <div>
+					<b>报告题目：</b> <span>面向大图学习的高效神经网络模型</span><br>
+					<b>报告时间：</b> <time>2022-4-16&nbsp;00:00~00:00</time><br>
+					<b>内容摘要：</b> 
+					<span class="h5">
+					围绕实际应用中大规模图数据的挖掘分析，汇报图神经网络模型针对大图学习面临的技术挑战，介绍当前主流的几类解决大图学习的技术思路，最后展望未来技术的发展方向。
+					</span>
+			   </div>
+			   <hr>
+			</div>	
+			
+			
+			<div class="media well">
+				
+				 <div class="media-body">	
+					<img src="./img/gaoxiaofeng.jpg" class="media-object img-rounded" style="width:80px;float:left;padding-right:6px;">
+				   <h4 class="media-heading">高晓沨</h4>
+				   <p>
+					  个人简介：高晓沨，上海交通大学计算机科学与工程系教授，博士生导师。主要研究领域为数据科学与数 据工程，重点关注数据库管理、无线网络、优化算法等方向。已在包括 TKDE、TPDS 等国际期 刊会议上发表论文160余篇，其中七次荣获国际会议最优论文奖（DASFAA2017，ICPADS2016 等）。
+					  主持过多项国家、省部级项目，任中国计算机学会数据库、并行与分布式系统、大数据 专委会委员;中国运筹学会数学优化分会、智能计算分会、不确定系统分会理事。
+				   </p>
 				</div>
-
-				<div class="aside-widget">
-					<header>
-						<h3 class="h3"><img src="./img/org_2.svg" alt="">&nbsp;<b>组织机构</b></h3>
-					</header>
-					<div class="body clearfix">
-						<ul class="tags">
-							<li>
-								<a href="http://www.caai.cn/" target="_blank">
-									<img src="./img/caai.png" alt="" class="img-responsive" width="200">
-								</a>
-							</li>
-							<li>
-								<a href="http://www.csb.org.cn/#/home" target="_blank">
-									<img src="./img/csb.png" alt="" class="img-responsive" width="200">
-								</a>
-							</li>
-							<li>
-								<a href="http://www.tju.edu.cn/index.htm" target="_blank">
-									<img src="./img/tju.png" alt="" class="img-responsive" width="200"
-										height="61">
-								</a>
-							</li>
-							<li>
-								<a href="https://www.hebut.edu.cn/" target="_blank">
-									<img src="./img/h2.jpg" alt="" class="img-responsive" width="200"
-										height="61">
-								</a>
-							</li>
-
-
-
-						</ul>
-					</div>
+				 <div>
+					<b>报告题目：</b> <span>暂无</span><br>
+					<b>报告时间：</b> <time>2022-4-16&nbsp;00:00~00:00</time><br>
+					<b>内容摘要：</b> 
+					<span class="h5">
+					暂无
+					</span>
+			   </div>
+			   <hr>
+			</div>	
+			
+			<div class="media well">
+				
+				 <div class="media-body">	
+					<img src="./img/xiongyun.jpg" class="media-object img-rounded" style="width:80px;float:left;padding-right:6px;">
+				   <h4 class="media-heading">熊贇</h4>
+				   <p>
+					  个人简介：熊贇，博士，复旦大学计算机科学技术学院教授，博士生导师，上海市数据科学重点实验室副主任，CCF YOCSEF上海主席（2020-2021）。
+					  长期从事数据领域研究，研究工作获得了国家自然科学基金、国家863、上海市科委基金等资助，研究成果发表在数据领域国际权威期刊和会议上。
+					  曾获中国计算机学会科学技术发明、上海市科技进步奖。在国内率先开展大数据和数据科学的研究工作，提出了一批新型的大数据挖掘算法，
+					  这些算法已被应用于医联平台、证券交易所、交通信息中心等上海市大数据建设重要领域。
+				   </p>
 				</div>
-			</aside>
-		</div>
-	</div>
-	<!-- 	</div> -->
-
-
-
-
-
-	<!-- 第三方排版 -->
-
-
-
-
-
-	<br><br>
-
-	<!-- 赞助商-->
-	<div class="container" style="display: none;">
-		<div>
-			<h3 class="text-center">赞助商</h3>
-		</div>
-		<!-- <p class="lead h6" style="text-indent: 2em;font-size: 16px;line-height: 1.8em;">
-			CAAI 2022 诚招赞助：2022年第一届CAAI大会将在天津市举办，为了办好 CAAI 2022 这一盛会，我们诚挚邀请相关企业踊跃赞助！
-			<br/>联系人：
-					 姬艳丽 (yanliji@uestc.edu.cn)； 纪荣嵘 (rrji@xmu.edu.cn)；
-		</p> -->
-	</div>
-	<!-- 赞助商名称 -->
-	<div class="container zanzhu" style="display: none;">
-		<table class="table table-responsive">
-			<tbody>
-				<tr class="row">
-					<td class="col-md-2 col-xs-2" style="border-right: 2px dashed #0053A1;">
-						<center>
-							<div class="img-thumbnail">
-								<center>
-									<img src="./images/jp.png" alt="" class="img-thumbnail">
-								</center>
-								<div class="caption">
-									<h5><strong>金牌赞助</strong></h5>
-								</div>
-							</div>
-						</center>
-					</td>
-					<td class="col-md-10 col-xs-10">
-						<div class="row">
-							<a href="#" class="col-md-2 col-xs-4">
-								<img src="images/zz01.png" alt="" class="img-thumbnail img-responsive"
-									width="150">
-							</a>
-							<a href="#" class="col-md-2 col-xs-4">
-								<img src="images/zz01.png" alt="" class="img-thumbnail img-responsive"
-									width="150">
-							</a>
-							<a href="#" class="col-md-2 col-xs-4">
-								<img src="images/zz01.png" alt="" class="img-thumbnail img-responsive"
-									width="150">
-							</a>
-							<a href="#" class="col-md-2 col-xs-4">
-								<img src="images/zz01.png" alt="" class="img-thumbnail img-responsive"
-									width="150">
-							</a>
-							<a href="#" class="col-md-2 col-xs-4">
-								<img src="images/zz01.png" alt="" class="img-thumbnail img-responsive"
-									width="150">
-							</a>
-						</div>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-	<!-- 赞助商名称 -->
-
-	<br />
+				 <div>
+					<b>报告题目：</b> <span>基于图深度学习的复杂行为数据分析</span><br>
+					<b>报告时间：</b> <time>2022-4-16&nbsp;00:00~00:00</time><br>
+					<b>内容摘要：</b> 
+					<span class="h5">
+					人类的行为被记录在计算机中，行为数据如何有效利用已成为学界与业界都关注的问题。
+					行为数据为识别和分析用户特征提供了丰富的数据基础，但与此同时，行为数据的复杂性（例如动态性、异质性、关联性等）也给分析方法研究带来了挑战。
+					本报告介绍基于图深度学习的复杂行为数据分析方法，及其在用户深度画像生成与业务监管场景中的应用。
+					</span>
+			   </div>
+			   <hr>
+			</div>	
+			
+			
+			
+			
+		</main>
+	  <!-- 会议议程框 -->
+	  </div>			
 	<footer>
 		<div class="widewrapper footer">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4 footer-widget">
 						<h3> <i class="fa fa-user"></i>往期回顾</h3>
-
+	
 						<p>
 							
 						由中国人工智能学会（CAAI）主办的第一届“生物神经智能-神经网络与图神经网络”研讨会将在天津市举办，为了办好这一盛会，我们诚挚邀请相关企业踊跃赞助！
 						</p>
 						</div>
-
+	
 					<div class="col-md-4 footer-widget">
 						<h3> <i class="fa fa-pencil"></i> 会议信息</h3>
 						<ul class="clean-list">
@@ -725,7 +345,7 @@
 							<li>2022年4 月17日（星期天）上午，专题讨论会，每个报告15分钟；下午代表离会或自由安排。</li>
 						</ul>
 					</div>
-
+	
 					<div class="col-md-4 footer-widget">
 						<h3> <i class="fa fa-envelope"></i>联系我们</h3>
 							<p>
@@ -736,19 +356,19 @@
 								<br>
 								河北工业大学人工智能与数据科学学院&nbsp; 
 								<br>杨亮 &nbsp; 13752497682&nbsp;yangliang@vip.qq.com
-
+	
 							</p>
 						<!-- <div class="footer-widget-icon">
 						<i class="fa fa-facebook"></i><i class="fa fa-twitter"></i><i class="fa fa-google"></i>
 					</div> -->
 					</div>
-
+	
 				</div>
 			</div>
 		</div>
 	</footer>
+				
+
 
 </body>
-
-
 </html>
