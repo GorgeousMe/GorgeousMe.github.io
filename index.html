@@ -38,7 +38,36 @@ aside .list-group-item.active{
 	background-color: #D9534F;
 	border: 0;
 }
-
+.sreen-gallery-cursual .panel{
+	margin-top:1.25rem;
+	margin-bottom: 1.25rem;
+}
+.sreen-gallery-cursual .panel .row div:nth-child(even) {
+		color: #dc3545;
+		font-weight: bolder;
+		padding-bottom: 0.9375rem;
+		/* background-color: #008000; */
+	}
+ 
+.sreen-gallery-cursual .panel .row div:nth-child(odd) {
+		color: ##007bff;
+		font-weight: bolder;
+		padding-bottom: 0.9375rem;
+		/* background-color: #262626; */
+	}
+.sreen-gallery-cursual .panel-body{
+	padding: 0rem;
+}
+	
+.main{
+	box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+.tags{
+	background-color: white;
+	display: inline-block;
+	height: auto;
+	z-index: 1;
+}
 </style>
 </head>
 <body>
@@ -94,14 +123,56 @@ aside .list-group-item.active{
 </div>
 <!-- 隐藏 -->
 
+	<div class="screen-shots">
+		<!--sreen-gallery-cursual-->
+		<div class="sreen-gallery-cursual container-fluid">
+			<div class="row col-md-12">
+				<div class="text-center panel col-xs-12 col-md-6 col-md-offset-3">
+					<div class="panel-heading">
 	
-	  <div class="class="jumbotron" style="position:relative;z-index:1;margin:0 auto; background-color:white;">
-	     <img src="./images/tj3.jpg"  class="img-responsive city" alt="天津" style="opacity:0.6; filter: alpha(opacity=60);"   />
-		 <div style="width:100%;position:absolute;z-index:2;top:30%; text-align:center;">
-		    <!-- <h1 class="h2 artw"><strong>CAAI&emsp;2022&emsp;COMMITTEES</strong></h1> -->
-			<h1 class="h2 artw"><strong><span>CAAI&emsp;2022&emsp;</span>特邀报告</strong></h1>
-		 </div>
-	  </div>
+						<!-- <span class=""><strong>CAAI 2022 天津</strong> </span> <br /> -->
+						<span class="h4"><strong>第一届“生物神经智能——神经网络与图神经网络”研讨会</strong></span>
+	
+					</div>
+					<div class="panel-body">
+	
+						<div class="row">
+							<div class="col-md-4 col-md-offset-1">会议时间</div>
+							<div class="col-md-6">2022年4月16-17日</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4 col-md-offset-1">会议地点</div>
+							<div class="col-md-6">天津大学北洋园校区55教学楼</div>
+						</div>
+	
+						<div class="row">
+							<div class="col-md-4 col-md-offset-1">会议形式</div>
+							<div class="col-md-6">线上线下相结合</div>
+						</div>
+	
+					<!-- 	<div class="row">
+							<div class="col-md-4 col-md-offset-1">会议规模</div>
+							<div class="col-md-6">约300人</div>
+						</div> -->
+	
+					</div>
+					<!-- <div class="panel-footer text-danger">
+						<strong>
+							免费参加，请参会代表于2022年4月10日24:00之前将<a href="./doc/zhucehuizhi.doc" target="_blank">回执(点击下载)</a>发送到会务组邮箱（王晓宝，wxbxmt@tju.edu.cn）。
+						</strong>
+					</div> -->
+				</div>
+	
+	
+<!-- 			</div>
+			<h1 class="h2 artw" style="z-index:1;position:relative;left:50%;top:20%;"><strong>大会程序</strong></h1> -->
+		</div>
+	
+			
+	</div>
+		
+	<div class="clearfix"></div>
+	</div>
 	  <script>
 	  	if(IsMobile()){
 	  		var nav=$(".navigation");
@@ -110,8 +181,8 @@ aside .list-group-item.active{
 	  		$('.hid').css('height',h);
 	  		$('.bigtit').text('2022 天津')
 			$('.artw strong').text('REPORTS')
-	  		console.log($(nav).length);
-	  		console.log(h)	
+	  		//console.log($(nav).length);
+	  		//console.log(h)	
 	  	}else{
 	  		$('.header-top').css('display','none')
 	  		var h=$(".navbar").height()+'px';
@@ -123,13 +194,29 @@ aside .list-group-item.active{
 	  		$('.navigation').addClass("navbar-fixed-top");
 	  		$('.hid').css('height',h);
 	  		$('.artw strong').text('REPORTS')
-	  		console.log(h)
+	  		//console.log(h)
 	  	}
+		// var info_hid=$('.city');
+		// var info_vis=$('.sreen-gallery-cursual');
+		// var h_info=$(info_hid).height()+'px';
+		// $(info_vis).css('height',h_info);
+		// console.log(h_info)
+		// console.log($(info_vis).length)
 	  </script>
 	  <br>
+
+	
+	
+	
+	
+	
+	
+	
+	  
+	  
 	  <!-- <div class="alert alert-info text-center" role="alert">敬请期待......</div> -->
 	  <!-- 会议议程框 -->
-	    <div class="container">
+	    <div class="container main">
 			<hr>
 			<header>
 			   <ul class="breadcrumb text-info">
@@ -146,17 +233,9 @@ aside .list-group-item.active{
 				<li class="list-group-item">王震教授(西北工业大学)</li>
 				<li class="list-group-item">王平辉教授(西安交通大学)</li>
 				<li class="list-group-item">高晓沨教授(上海交通大学)</li>
-				
 				<li class="list-group-item">熊贇教授(复旦大学)</li>
 			</ul>
-		<!-- 	<ul class="list-group">
-				<li class="list-group-item active">特邀嘉宾</li>
-				<li class="list-group-item">张三</li>
-				<li class="list-group-item">李四</li>
-				<li class="list-group-item">王五</li>
-				<li class="list-group-item">赵六</li>
-				<li class="list-group-item">汤七</li>
-			</ul> -->
+		
 		</aside>
 		 <main class="container col-md-9 col-xs-12">
 			 
@@ -323,21 +402,15 @@ aside .list-group-item.active{
 			
 		</main>
 	  <!-- 会议议程框 -->
-	  </div>			
+	  </div>	
+		<hr>
 	<footer>
 		<div class="widewrapper footer">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-4 footer-widget">
-						<h3> <i class="fa fa-user"></i>往期回顾</h3>
+					
 	
-						<p>
-							
-						由中国人工智能学会（CAAI）主办的第一届“生物神经智能-神经网络与图神经网络”研讨会将在天津市举办，为了办好这一盛会，我们诚挚邀请相关企业踊跃赞助！
-						</p>
-						</div>
-	
-					<div class="col-md-4 footer-widget">
+					<div class="col-md-5 footer-widget">
 						<h3> <i class="fa fa-pencil"></i> 会议信息</h3>
 						<ul class="clean-list">
 							<li>2022年4月15日（星期五）正式报到，报到地点：天津大学北洋园校区，时间：10:00～23:00。</li>
@@ -346,7 +419,7 @@ aside .list-group-item.active{
 						</ul>
 					</div>
 	
-					<div class="col-md-4 footer-widget">
+					<div class="col-md-3 footer-widget">
 						<h3> <i class="fa fa-envelope"></i>联系我们</h3>
 							<p>
 								联系方式：<br>
@@ -358,16 +431,48 @@ aside .list-group-item.active{
 								<br>杨亮 &nbsp; 13752497682&nbsp;yangliang@vip.qq.com
 	
 							</p>
-						<!-- <div class="footer-widget-icon">
-						<i class="fa fa-facebook"></i><i class="fa fa-twitter"></i><i class="fa fa-google"></i>
-					</div> -->
+					
+					</div>
+					<div class="col-md-4 footer-widget">
+						<h3> <i class="fa fa-user"></i>往期回顾</h3>
+						
+						<ul class="tags">
+							<li>
+								<a href="http://www.caai.cn/" target="_blank">
+									<img src="./img/caai.png" alt="" class="" width="200" height="40">
+								</a>
+							</li>
+							<li>
+								<a href="http://www.csb.org.cn/#/home" target="_blank">
+									<img src="./img/csb.png" alt="" class="" width="200" height="40">
+								</a>
+							</li>
+							<li>
+								<a href="http://www.tju.edu.cn/index.htm" target="_blank" >
+									<img src="./img/tju.png" alt="" class=""
+										height="40">
+								</a>
+							</li>
+							<li>
+								<a href="https://www.hebut.edu.cn/" target="_blank">
+									<img src="./img/h2.jpg" alt="" class="" 
+										height="40">
+								</a>
+							</li>
+						
+						
+						
+						</ul>
+						
 					</div>
 	
 				</div>
 			</div>
 		</div>
 	</footer>
-				
+	
+
+	
 
 
 </body>

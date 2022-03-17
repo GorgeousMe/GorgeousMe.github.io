@@ -2875,6 +2875,11 @@ ul.contact_info span {
 ;
 }
 /* 注意新闻栏目 */
-
+.tags{
+	background-color: white;
+	display: inline-block;
+	height: auto;
+	z-index: 1;
+}
  
  
