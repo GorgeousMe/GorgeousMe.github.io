@@ -191,7 +191,7 @@
         var appid = "";
         var share = {
             shareFriend: function () {
-                WeixinJSBridge.invoke(‘sendAppMessage‘, {
+                WeixinJSBridge.invoke('sendAppMessage', {
                     "appid": appid,
                     "img_url": imgUrl,
                     "img_width": "200",
@@ -205,7 +205,7 @@
             },
             //分享到朋友圈
             shareTimeline: function () {
-                WeixinJSBridge.invoke(‘shareTimeline‘, {//
+                WeixinJSBridge.invoke('shareTimeline', {//
                     "img_url": imgUrl,
                     "img_width": "200",
                     "img_height": "200",
@@ -217,13 +217,13 @@
                 });
             }
         }
-        document.addEventListener(‘WeixinJSBridgeReady‘, function onBridgeReady() {//
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {//
             //发送给好友
-            WeixinJSBridge.on(‘menu:share:appmessage‘, function (argv) {
+            WeixinJSBridge.on('menu:share:appmessage', function (argv) {
                 share.shareFriend();
             });
             //分享到朋友圈
-            WeixinJSBridge.on(‘menu:share:timeline‘, function (argv) {
+            WeixinJSBridge.on('menu:share:timeline', function (argv) {
                 share.shareTimeline();
             });
         }, false);
