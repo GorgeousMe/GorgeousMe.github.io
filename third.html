@@ -173,11 +173,19 @@
 
 	
 	  <div class="class="jumbotron" style="position:relative;z-index:1;margin:0 auto; background-color:white;">
+	  
 	     <img src="./images/tj3.jpg"  class="img-responsive city" alt="天津" style="opacity:0.6; filter: alpha(opacity=60);"   />
-		 <div style="width:100%;position:absolute;z-index:2;top:30%; text-align:center;">
-		    <!-- <h1 class="h2 artw"><strong>CAAI&emsp;2022&emsp;COMMITTEES</strong></h1> -->
-			<h1 class="h2 artw"><strong>大会程序</strong></h1>
+		 <div style="width:100%;position:absolute;z-index:2;top:0%; text-align:center;">
+		    <h1 class="artw h5">
+				
+					<span>第一届“生物神经智能—神经网络与图神经网络”研讨会</span> <br>
+					<span>主办单位：中国人工智能学会</span>	 <br>
+					<span>承办单位：CAAI人工智能基础专业委员会</span>	 <br>				
+					<span>协办单位：天津大学、河北工业大学</span>
+				
+			</h1>
 		 </div>
+
 	  </div>
 	  
 	  <script>
@@ -187,7 +195,20 @@
 	  		$(nav).children('nav').addClass("navbar-fixed-top");
 	  		$('.hid').css('height',h);
 	  		$('.bigtit').text('2022 天津')
-			$('.artw strong').text('AGENDA')
+	  		var sp=$(".artw span")
+	  		$(sp).each(function(i){
+	  			if(i==0)
+	  			{
+	  				$(sp[i]).addClass("h3")
+	  			}else{
+	  				$(sp[i]).addClass("h4")
+	  			}
+	  			$(sp[i]).css('line-height','27px');
+	  			$(sp[i]).css('color','#092C87');
+	  		})
+	  		
+	  		//var txt="第一届“生物神经智能—神经网络与图神经网络”研讨会主办单位：中国人工智能学会承办单位：CAAI人工智能基础专业委员会					协办单位：天津大学、河北工业大学"
+			//$('.artw strong').text(txt)
 	  		console.log($(nav).length);
 	  		console.log(h)	
 	  	}else{
@@ -200,7 +221,19 @@
 	  		
 	  		$('.navigation').addClass("navbar-fixed-top");
 	  		$('.hid').css('height',h);
-	  		$('.artw strong').text('AGENDA')
+	  		var sp=$(".artw span")
+	  		$(sp).each(function(i){
+	  			if(i==0)
+	  			{
+	  				$(sp[i]).addClass("h2")
+	  			}else{
+	  				$(sp[i]).addClass("h3")
+	  			}
+	  			$(sp[i]).css('line-height','35px');
+	  			$(sp[i]).css('color','#092C87');
+	  		})
+	  		//var txt="第一届“生物神经智能—神经网络与图神经网络”研讨会主办单位：中国人工智能学会承办单位：CAAI人工智能基础专业委员会					协办单位：天津大学、河北工业大学"
+			//$('.artw strong').text(txt)
 	  		console.log(h)
 	  	}
 
@@ -401,7 +434,7 @@
 	  	  	<tbody>
 	  	  		<tr>
 	  	  			<td rowspan="12">上午 <br>
-	  	  				（主持人：王晓宝） 
+	  	  				（主持人：金弟、王晓宝、杨亮） 
 	  	  			</td>				
 	  	  		</tr>
 	  	  		<tr>	  	  			

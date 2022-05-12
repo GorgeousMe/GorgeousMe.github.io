@@ -2732,9 +2732,7 @@ ul.contact_info span {
 	.hr::before{
 		font-size: 1.5rem;
 	}
-	.artw span{
-		display: none;
-	}
+
 	.header-top{
 		display: none;
 	}
@@ -2804,7 +2802,7 @@ ul.contact_info span {
 }
 
 .artw,.navbar-default .artw{
-	/* color:#0055AA; */
+	/*color:#092C87; */
 	text-shadow:  0.0625rem 0px #999,
 	 0px 0.125rem 0px #888, 
 	 0px 0.1875rem 0px #777, 
